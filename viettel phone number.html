@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Viettel number</title>
+</head>
+<body>
+<script>
+    let phone =   ['0912345678', '091234545678', '0348250796', '0123456789', '0234567891'];
+    function check(arrPhone) {
+        let regExp = /((09|03|08)+([0-9]{8,9})\b)$/;
+        for (let i=0;i< arrPhone.length;i++){
+            if (regExp.test(arrPhone[i])){
+                document.write("ok <br/>");
+            }else {
+                document.write("false <br/>");
+            }
+        }
+    }
+    check(phone);
+</script>
+</body>
+</html>
